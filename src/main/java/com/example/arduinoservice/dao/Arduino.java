@@ -1,4 +1,4 @@
-package com.example.arduinoservice.model;
+package com.example.arduinoservice.dao;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +17,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(schema = "arduino")
+@Table(name = "arduino")
 public class Arduino {
     @Id
     @GeneratedValue
@@ -25,4 +25,5 @@ public class Arduino {
     private String userId;
     private Date lastSeen;
     private Boolean registered;
+    private Integer streakCount;
 }
